@@ -10,7 +10,6 @@ exports.create = (req,res)=>{
 
     // new user
     const user = new Userdb({
-        
         name : req.body.name,
         email : req.body.email,
         gender: req.body.gender,
@@ -18,7 +17,7 @@ exports.create = (req,res)=>{
     })
 
     // save user in the database
-    user
+  
         .save(user)
         .then(data => {
             //res.send(data)
